@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+@pastpurple: rgb(227, 164, 249);
+
 body {
   font-family: 'Montserrat', sans-serif;
   margin:0;
@@ -16,13 +18,14 @@ body {
     padding: 0 5px;
   }
   a:hover {
-    color: rgb(162, 111, 236);
+    color:@pastpurple;
   }
   big {
     position: relative;
-    right:23%;
+    right:19%;
     font-size: 32px;
     margin: 8px;
+    img {width:50px;}
   }
 }
 .main-box {
@@ -32,9 +35,23 @@ body {
   background-color: rgb(161, 218, 255);
   text-align: center;
   padding:15px;
+  .side-box {
+    background-color:@pastpurple;
+    border-radius: 10px;
+    width: 20%;
+    height: auto;
+    float: left;
+    min-height: 360px;
+    padding:5px;
+  }
+  .side-box:nth-child(1) {
+    float: right;
+  }
   img {
     width:550px;
     border-radius:1%;
+    // border: 1px solid black;
+    box-shadow: 2px 2px 2px gray;
   }
 }
 .desc-box {
