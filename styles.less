@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Zeyada);
 
 @pastpurple: rgb(227, 164, 249);
 
@@ -10,9 +11,9 @@ body {
 .header {
   text-align: center;
   background-color: rgba(5,5,5,0.5);
-  padding:10px 20px;
+  padding:0px 20px;
   border-bottom: 1px solid white;
-  div {
+  .links {
     width: 35%;
     text-align: right;
     position: absolute;
@@ -29,9 +30,10 @@ body {
       }
   }
   big {
-    font-size: 32px;
-    margin: 8px;
-    img {width:50px;}
+    font-family: 'Zeyada', cursive;
+    font-size: 52px;
+    margin: 0px;
+    img {width:50px;margin:0;}
   }
 }
 .main-box {
@@ -49,6 +51,10 @@ body {
     float: left;
     min-height: 360px;
     padding:5px;
+    p{
+      margin:10px;
+      text-align: left;
+    }
   }
   .side-box:nth-child(1) {
     float: right;
@@ -69,4 +75,35 @@ body {
   padding: 1px 0;
   min-height: 200px;
   p { padding: 10px; }
+}
+.countdown-row {
+  display:block;
+  padding: 15px;
+}
+
+.countdown-section {
+  display:block;
+}
+
+.countdown-section>span {
+  display:inline;
+}
+
+.countdown-section+.countdown-section {
+  margin-left:20px;
+}
+
+.countdown-section .countdown-amount {
+  font-size:40px;
+  line-height:70px;
+  font-weight:700;
+  margin-bottom:5px;
+}
+
+.countdown-section .countdown-period {
+  text-transform:uppercase;
+  font-weight:300;
+  font-size:16px;
+  line-height:0px;
+  letter-spacing:6px;
 }
