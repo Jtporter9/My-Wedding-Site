@@ -1,12 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Zeyada);
+@import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
 @pastpurple: rgb(227, 164, 249);
 @pastblue: rgb(161, 218, 255);
 @pastmint: rgb(149, 246, 188);
 body {
-    font-family: 'Montserrat', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 22px;
+    letter-spacing: 1px;
     margin: 0;
     background-image: url("https://s-media-cache-ak0.pinimg.com/736x/0b/2c/38/0b2c384b0e930824887f799fe842c836.jpg");
+    a {
+        color: white;
+    }
+    a:hover {
+        color: @pastmint;
+    }
 }
 .header {
     text-align: center;
@@ -22,12 +32,12 @@ body {
         top: 20px;
         a {
             float: right;
-            font-size: 16px;
+            font-size: 22px;
             color: white;
             padding: 0 5px;
         }
         a:hover {
-            color: @pastpurple;
+            color: @pastmint;
         }
     }
     big {
@@ -42,7 +52,7 @@ body {
 }
 .main-box {
     width: 90%;
-    height: auto;
+    height: 430px;
     margin: 60px 5%;
     border-radius: 10px;
     background-color: @pastblue;
@@ -52,12 +62,12 @@ body {
         background-color: @pastpurple;
         border-radius: 10px;
         width: 20%;
-        height: auto;
         float: left;
-        min-height: 440px;
+        height: 95%;
         padding: 5px;
         h1 {
             font-family: 'Zeyada', cursive;
+            margin: 10px 0;
         }
         p {
             margin: 10px;
@@ -78,6 +88,8 @@ body {
     }
 }
 .location {
+    display: flex;
+    justify-content: space-between;
     text-align: center;
     width: 70%;
     margin: 15px 15%;
@@ -85,13 +97,37 @@ body {
     background-color: @pastmint;
     padding: 1px 0;
     min-height: 200px;
+    height: auto;
+    div {
+        float: left;
+        width: 48%;
+        padding: 10px;
+        img {
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 3px solid white;
+        }
+        p {
+            word-spacing: 2px;
+        }
+        ul {
+            text-align: left;
+            li {
+                margin: 10px 0;
+            }
+        }
+    }
+    div:nth-child(2) {
+        border-left: 1px solid black;
+    }
     p {
         padding: 10px;
     }
 }
 .countdown-row {
     display: block;
-    padding: 15px;
+    padding: 5px;
 }
 .countdown-section {
     display: block;
@@ -107,13 +143,14 @@ body {
     line-height: 100px;
     font-weight: 700;
     margin-bottom: 5px;
+    letter-spacing: 7px;
 }
 .countdown-section .countdown-period {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 16px;
     line-height: 0;
-    letter-spacing: 6px;
+    letter-spacing: 5px;
 }
 .registry-box {
     background-color: @pastpurple;
@@ -123,6 +160,15 @@ body {
     border-radius: 10px;
     padding: 1px 0;
     min-height: 200px;
+    div{
+      width:15%;
+      margin: 10px;
+      padding:5px;
+      position: relative;
+      left:38%;
+        ul {
+        }
+    }
 }
 .photos {
     background-color: @pastblue;
@@ -138,7 +184,7 @@ body {
     clear: both;
     margin-top: 20px;
     position: relative;
-    left:21%;
+    left: 21%;
     width: 60%;
     height: 480px;
 }
@@ -184,13 +230,13 @@ ul.lense li a.active {
     border-bottom: 4px solid red;
     padding-bottom: 7px;
 }
-.lense-slides{
-  img{
-    width:100%;
-  }
+.lense-slides {
+    img {
+        width: 100%;
+    }
 }
-.lense{
-  img{
-    width:10%;
-  }
+.lense {
+    img {
+        width: 10%;
+    }
 }
