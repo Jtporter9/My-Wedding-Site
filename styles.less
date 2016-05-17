@@ -1,9 +1,34 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Zeyada);
 @import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
+//
+// Variables
+// ------
 @pastpurple: rgb(227, 164, 249);
 @pastblue: rgb(161, 218, 255);
 @pastmint: rgb(149, 246, 188);
+@gray: #333;
+@gray-light: #aaa;
+@gray-lighter: #eee;
+@space: 40px;
+@blue: #428bca;
+@blue-dark: darken(@blue, 5%);
+// Mixin for transition/transform
+.translate(@x; @y) {
+    -webkit-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y); // IE9+
+    transform: translate(@x, @y);
+}
+.transition(@transition) {
+    -webkit-transition: @transition;
+    transition: @transition;
+}
+.transition-transform(@transition) {
+    -webkit-transition: -webkit-transform @transition;
+    -moz-transition: -moz-transform @transition;
+    -o-transition: -o-transform @transition;
+    transition: transform @transition;
+}
 body {
     // font-family: 'Montserrat', sans-serif;
     font-family: 'Covered By Your Grace', cursive;
@@ -118,7 +143,7 @@ body {
             }
         }
     }
-    div:nth-child(2) {
+    .seperater {
         border-left: 1px solid black;
     }
     p {
@@ -160,14 +185,13 @@ body {
     border-radius: 10px;
     padding: 1px 0;
     min-height: 200px;
-    div{
-      width:15%;
-      margin: 10px;
-      padding:5px;
-      position: relative;
-      left:38%;
-        ul {
-        }
+
+    div {
+          a{
+            img{
+              width:30%;
+            }
+          }
     }
 }
 .photos {
@@ -239,4 +263,83 @@ ul.lense li a.active {
     img {
         width: 10%;
     }
+}
+// MODAL STUFF
+.btn-close {
+    color: @gray-light;
+    font-size: 50px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: -27px;
+    word-spacing: -15px;
+    &:hover {
+        color: darken(@gray-light, 40%);
+    }
+    span {
+        font-size: 25px;
+    }
+}
+//
+// Modal
+// ----------------------
+.modal {
+    // This is modal bg
+    &:before {
+        content: "";
+        display: none;
+        background: rgba(0,0,0,.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+    }
+    &:target {
+        // Active animate in modal
+        &:before {
+            display: block;
+        }
+        .modal-dialog {
+            .translate(0, 0);
+            top: 20%;
+        }
+    }
+}
+// Modal Dialog
+// ----------------------
+.modal-dialog {
+    background: #fefefe;
+    border-radius: 5px;
+    position: fixed;
+    left: 25%;
+    top: -100%;
+    z-index: 9999;
+    width: 75%;
+    .translate(0, -500%);
+    .transition-transform(~  "0.3s ease-out");
+    img {
+        width: 100%;
+        margin: 50px 20px;
+        position:relative;
+        top:5px;
+    }
+}
+footer {
+  background-color: rgba(5,5,5,0.5);
+  padding: 0 20px;
+  border-bottom: 1px solid white;
+  height: 60px;
+  span{
+  position: relative;
+  top: 25px;
+  float: left;
+  }
+  big{
+    font-size: 22px;
+    position: relative;
+    top: 25px;
+    float: right;
+  }
 }
