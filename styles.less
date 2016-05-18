@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Zeyada);
-@import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
-//
+@import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace); //
 // Variables
 // ------
 @pastpurple: rgb(227, 164, 249);
@@ -12,8 +11,7 @@
 @gray-lighter: #eee;
 @space: 40px;
 @blue: #428bca;
-@blue-dark: darken(@blue, 5%);
-// Mixin for transition/transform
+@blue-dark: darken(@blue, 5%); // Mixin for transition/transform
 .translate(@x; @y) {
     -webkit-transform: translate(@x, @y);
     -ms-transform: translate(@x, @y); // IE9+
@@ -179,19 +177,38 @@ body {
 }
 .registry-box {
     background-color: @pastpurple;
-    text-align: center;
     width: 80%;
     margin: 15px 10%;
     border-radius: 10px;
     padding: 1px 0;
     min-height: 200px;
-
-    div {
-          a{
-            img{
-              width:30%;
-            }
-          }
+    .reg-header{
+      text-align: center;
+      border-bottom: 1px solid black;
+    }
+    h2 {
+        margin: 0;
+        padding: 0;
+    }
+    .gift {
+        width: 5%;
+    }
+    a {
+        img {
+            width: 30%;
+            border-radius: 5px;
+        }
+    }
+    .btm-container{
+      display:flex;
+      justify-content:space-between;
+      div{
+        width:50%;
+        float:left;
+      }
+      div:nth-child(2){
+        border-left: 1px solid black;
+      }
     }
 }
 .photos {
@@ -322,24 +339,24 @@ ul.lense li a.active {
     img {
         width: 100%;
         margin: 50px 20px;
-        position:relative;
-        top:5px;
+        position: relative;
+        top: 5px;
     }
 }
 footer {
-  background-color: rgba(5,5,5,0.5);
-  padding: 0 20px;
-  border-bottom: 1px solid white;
-  height: 60px;
-  span{
-  position: relative;
-  top: 25px;
-  float: left;
-  }
-  big{
-    font-size: 22px;
-    position: relative;
-    top: 25px;
-    float: right;
-  }
+    background-color: rgba(5,5,5,0.5);
+    padding: 0 20px;
+    border-bottom: 1px solid white;
+    height: 60px;
+    span {
+        position: relative;
+        top: 25px;
+        float: left;
+    }
+    big {
+        font-size: 22px;
+        position: relative;
+        top: 25px;
+        float: right;
+    }
 }
