@@ -1,0 +1,17 @@
+{
+  "name": "wedding-site",
+  "homepage": "https://github.com/Jtporter9/My-Wedding-Site",
+  "authors": [
+    "J. Tanner Porter <jtporter9@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
