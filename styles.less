@@ -81,6 +81,7 @@ body {
     background-color: @pastblue;
     text-align: center;
     padding: 15px;
+    box-shadow: 2px 2px 2px 2px gray;
     h1 {
         text-transform: uppercase;
     }
@@ -91,6 +92,7 @@ body {
         float: left;
         height: 400px;
         padding: 5px;
+        box-shadow: 2px 2px 2px 2px gray;
         h1 {
             font-family: 'Zeyada', cursive;
             margin: 10px 0;
@@ -107,13 +109,14 @@ body {
     img {
         width: 55%;
         border-radius: 1%;
-        box-shadow: 4px 4px 4px 4px gray;
+        box-shadow: 2px 2px 2px 2px gray;
     }
     p {
         margin: 0 25%;
     }
 }
 .location {
+    box-shadow: 2px 2px 2px 2px gray;
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -180,6 +183,7 @@ body {
     letter-spacing: 5px;
 }
 .registry-box {
+    box-shadow: 2px 2px 2px 2px gray;
     background-color: @pastpurple;
     width: 80%;
     margin: 15px 10%;
@@ -247,6 +251,7 @@ body {
     }
 }
 .photos {
+    box-shadow: 2px 2px 2px 2px gray;
     background-color: @pastblue;
     text-align: center;
     width: 80%;
@@ -336,8 +341,10 @@ ul.lense li a.active {
 // ----------------------
 .modal {
     // This is modal bg
-    div{
-      img{width:100%;}
+    div {
+        img {
+            width: 100%;
+        }
     }
     &:before {
         content: "";
@@ -636,7 +643,7 @@ footer {
         height: auto;
         div {
             width: 70%;
-            left:15%;
+            left: 15%;
         }
         .split-boxes {
             float: none;
