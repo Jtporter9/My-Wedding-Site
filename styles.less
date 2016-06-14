@@ -106,10 +106,14 @@ body {
     .side-box:nth-child(1) {
         float: right;
     }
-    img {
+    #slidy-container {
+        display: inline-block;
         width: 55%;
-        border-radius: 1%;
+        border-radius: 5px;
         box-shadow: 2px 2px 2px 2px gray;
+        overflow: hidden;
+        margin: 0 auto;
+        border: 5px solid darkgray;
     }
     p {
         margin: 0 25%;
@@ -283,8 +287,8 @@ body {
     -o-transition: opacity 0.5s ease-in-out, visibility 0.5s linear 0.5s;
     transition: opacity 0.5s ease-in-out, visibility 0.5s linear 0.5s;
     img {
-      border-radius: 5px;
-      box-shadow: 2px 2px 2px 2px gray;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 2px gray;
     }
 }
 .lense-slides div.active {
@@ -424,7 +428,9 @@ footer {
         float: right;
     }
 }
-//media query!!
+////////////////////////////////////////////
+//////////////media query!!////////////////
+//////////////////////////////////////////
 @media only screen and (max-width: 1225px) {
     .main-box {
         font-size: 12px;
@@ -868,6 +874,4 @@ footer {
         }
     }
 }
-@media only screen and (max-width: 342px) {
-
-}
+@media only screen and (max-width: 342px) {}
