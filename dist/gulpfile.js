@@ -1,0 +1,1 @@
+var gulp=require("gulp"),addsrc=require("gulp-add-src"),coffee=require("gulp-coffee"),uglify=require("gulp-uglify");gulp.task("build",function(){return gulp.src("files/coffee/*.coffee").pipe(coffee()).pipe(addsrc("./*.js")).pipe(uglify()).pipe(gulp.dest("dist"))});
