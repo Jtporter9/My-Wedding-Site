@@ -6,6 +6,7 @@ var gulp = require('gulp')
   , less = require('gulp-less')
   , path = require('path')
   , watch = require('gulp-watch')
+  , imagemin = require('gulp-imagemin')
 
 
 gulp.task('build', function() {
@@ -29,6 +30,12 @@ gulp.task('minify-css', function() {
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('dist'));
 });
+
+gulp.task('minify-pics', () =>
+	gulp.src('./pics/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('dist/images'))
+);
 
 
 //HAVENT USED YET PROBABLY SHOULD FOR MORE STYLING CHANGES
